@@ -36,10 +36,6 @@ public class CsvToDatabaseConfig {
     private StepBuilderFactory stepBuilderFactory;
     private static final Resource INPUT_RESOURCE = new FileSystemResource("input/students.csv");
 
-    @Bean
-    public ResourcelessTransactionManager resourcelessTransactionManager() {
-        return new ResourcelessTransactionManager();
-    }
     //----- Reader ------
     @Bean
     ItemReader<Student> csvStudentItemReader() {
